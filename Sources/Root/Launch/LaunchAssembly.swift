@@ -9,29 +9,31 @@
 import Foundation
 import Swinject
 import Managers
-import Firebase
 import Authorization
 import AlertManager
 import Utils
 import UIKit
 import NetworkServices
-import FirebaseAuth
 import Account
 import AuthorizedZone
 
 public final class ApplicationAssembly: Assembly {
+    public init() { }
     public func assemble(container: Container) {
         UtilsAssembly().assemble(container: container)
+        
         KeychainServiceAssembly().assemble(container: container)
         UserDefaultsServiceAssembly().assemble(container: container)
-        QuickAccessManagerAssembly().assemble(container: container)
-        AlertManagerAssembly().assemble(container: container)
-        NetworkServicesAssembly().assemble(container: container)
-        AuthManagerAssembly().assemble(container: container)
         CoreDataServiceAssembly().assemble(container: container)
         AccountCacheServiceAssembly().assemble(container: container)
-        AccountManagerAssembly().assemble(container: container)
-        ProfilesManagerAssembly().assemble(container: container)
+        
+        NetworkServicesAssembly().assemble(container: container)
+        
+        AlertManagerAssembly().assemble(container: container)
+        
+        ManagersAssembly().assemble(container: container)
+    
+        AccountUserStoryAssembly().assemble(container: container)
         AuthorizationUserStoryAssembly().assemble(container: container)
         SettingsUserStoryAssembly().assemble(container: container)
         ProfileUserStoryAssembly().assemble(container: container)
