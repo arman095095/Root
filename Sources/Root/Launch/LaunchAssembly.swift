@@ -16,6 +16,8 @@ import UIKit
 import NetworkServices
 import Account
 import AuthorizedZone
+import Settings
+import Profile
 
 public final class ApplicationAssembly: Assembly {
     public init() { }

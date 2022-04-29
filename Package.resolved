@@ -15,7 +15,7 @@
       "location" : "https://github.com/arman095095/Account.git",
       "state" : {
         "branch" : "develop",
-        "revision" : "ce15c7f6ee2078060568c49725a0f2881585818a"
+        "revision" : "783f0249fe3b996ca6fb30a208996c80f1606e27"
       }
     },
     {
@@ -132,7 +132,7 @@
       "location" : "https://github.com/arman095095/Managers.git",
       "state" : {
         "branch" : "develop",
-        "revision" : "c84d66f85a69b24c657f410146fb670188214a80"
+        "revision" : "9af09702b5e1cfa98dab06ff5aa9cb084e6b53ee"
       }
     },
     {
@@ -159,7 +159,7 @@
       "location" : "https://github.com/arman095095/NetworkServices.git",
       "state" : {
         "branch" : "develop",
-        "revision" : "ff40042f29d8e6c36a99c01fbf673fe47060e6e9"
+        "revision" : "dda67a6515a5a2e652e36cd035bf89b3b41da019"
       }
     },
     {
@@ -204,7 +204,7 @@
       "location" : "https://github.com/arman095095/Settings.git",
       "state" : {
         "branch" : "develop",
-        "revision" : "0d267d1347a149e4e73c2a7587a313781afb9882"
+        "revision" : "8e464daf78b927bd5baf2aa54beb41cb997435ca"
       }
     },
     {
