@@ -19,19 +19,10 @@ import FirebaseAuth
 import Account
 import AuthorizedZone
 
-public final class ApplicationAssembly {
-
-    public static func generalAssemble(container: Container) {
+public final class ApplicationAssembly: Assembly {
+    public func assemble(container: Container) {
         QuickAccessManagerAssembly.assemble(container: container)
         AlertManagerAssembly.assemble(container: container)
         NetworkServicesAssembly.assemble(container: container)
-    }
-    
-    public static func assembleUnauthorizedZone(container: Container) {
-        AuthorizationUserStoryAssembly.assemble(container: container)
-    }
-    
-    public static func assembleAuthorizedZone(container: Container) {
-        AuthorizedZoneUserStoryAssembly.assemble(container: container)
     }
 }
