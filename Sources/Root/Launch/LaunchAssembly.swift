@@ -21,8 +21,20 @@ import AuthorizedZone
 
 public final class ApplicationAssembly: Assembly {
     public func assemble(container: Container) {
-        QuickAccessManagerAssembly.assemble(container: container)
-        AlertManagerAssembly.assemble(container: container)
-        NetworkServicesAssembly.assemble(container: container)
+        UtilsAssembly().assemble(container: container)
+        KeychainServiceAssembly().assemble(container: container)
+        UserDefaultsServiceAssembly().assemble(container: container)
+        QuickAccessManagerAssembly().assemble(container: container)
+        AlertManagerAssembly().assemble(container: container)
+        NetworkServicesAssembly().assemble(container: container)
+        AuthManagerAssembly().assemble(container: container)
+        CoreDataServiceAssembly().assemble(container: container)
+        AccountCacheServiceAssembly().assemble(container: container)
+        AccountManagerAssembly().assemble(container: container)
+        ProfilesManagerAssembly().assemble(container: container)
+        AuthorizationUserStoryAssembly().assemble(container: container)
+        SettingsUserStoryAssembly().assemble(container: container)
+        ProfileUserStoryAssembly().assemble(container: container)
+        AuthorizedZoneUserStoryAssembly().assemble(container: container)
     }
 }
