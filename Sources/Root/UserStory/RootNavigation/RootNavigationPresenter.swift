@@ -49,6 +49,7 @@ final class RootNavigationPresenter {
 
 extension RootNavigationPresenter: RootNavigationViewOutput {
     func viewDidLoad() {
+        view?.setupInititalState()
         configure()
     }
 }

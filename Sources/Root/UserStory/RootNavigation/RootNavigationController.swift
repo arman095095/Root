@@ -9,7 +9,7 @@
 import UIKit
 
 protocol RootNavigationViewInput: AnyObject {
-    
+    func setupInititalState()
 }
 
 final class RootNavigationController: UINavigationController {
@@ -23,5 +23,7 @@ final class RootNavigationController: UINavigationController {
 }
 
 extension RootNavigationController: RootNavigationViewInput {
-    
+    func setupInititalState() {
+        navigationBar.prefersLargeTitles = false
+    }
 }

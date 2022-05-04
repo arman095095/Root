@@ -13,6 +13,7 @@ import Swinject
 import Settings
 import Account
 import Managers
+import ProfileRouteMap
 import Profile
 
 protocol RootNavigationRouterInput: AnyObject {
