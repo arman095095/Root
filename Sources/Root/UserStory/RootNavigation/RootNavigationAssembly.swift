@@ -10,8 +10,7 @@ import UIKit
 import Module
 import Managers
 import Swinject
-
-public typealias RootNavigationModule = Module<RootNavigationModuleInput, RootNavigationModuleOutput>
+import RootRouteMap
 
 enum RootNavigationAssembly {
     static func makeModule(quickAccessManager: QuickAccessManagerProtocol, container: Container) -> RootNavigationModule {

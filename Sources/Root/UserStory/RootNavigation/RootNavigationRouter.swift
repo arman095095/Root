@@ -7,21 +7,23 @@
 //
 
 import UIKit
-import Authorization
-import AuthorizedZone
+import AuthorizedZoneRouteMap
 import Swinject
-import Settings
-import Account
-import Managers
+import SettingsRouteMap
+import AccountRouteMap
+import ModelInterfaces
 import ProfileRouteMap
-import Profile
+import AuthorizationRouteMap
+import UserStoryFacade
 
 protocol RootNavigationRouterInput: AnyObject {
     func openAuthorizationModule(output: AuthorizationModuleOutput,
                                  container: Container)
-    func openAuthorizedZone(context: InputFlowContext,
-                            output: AuthorizedZoneModuleOutput,
-                            container: Container)
+    func openAuthorizedZoneAfterLaunch(output: AuthorizedZoneModuleOutput,
+                                       container: Container)
+    func openAuthorizedZoneAfterAuthorization(account: AccountModelProtocol,
+                                              output: AuthorizedZoneModuleOutput,
+                                              container: Container)
     func openAccountCreationModule(output: AccountModuleOutput,
                                    container: Container)
     func openAccountEditModule(output: AccountModuleOutput,
@@ -37,34 +39,59 @@ final class RootNavigationRouter {
 
 extension RootNavigationRouter: RootNavigationRouterInput {
 
-    func openAuthorizedZone(context: InputFlowContext,
-                            output: AuthorizedZoneModuleOutput,
-                            container: Container) {
-        let module = AuthorizedZoneUserStory(container: container).rootModule(context: context)
+    func openAuthorizedZoneAfterAuthorization(account: AccountModelProtocol,
+                                              output: AuthorizedZoneModuleOutput,
+                                              container: Container) {
+        let safeResolver = container.synchronize()
+        guard let module = safeResolver.resolve(UserStoryFacade.self)?.authorizedZoneUserStory?.rootModuleAfterAuthorization(account: account) else {
+            fatalError(ErrorMessage.dependency.localizedDescription)
+        }
+        module.output = output
+        transitionHandler?.setViewControllers([module.view], animated: true)
+    }
+    
+    func openAuthorizedZoneAfterLaunch(output: AuthorizedZoneModuleOutput,
+                                       container: Container) {
+        let safeResolver = container.synchronize()
+        guard let module = safeResolver.resolve(UserStoryFacade.self)?.authorizedZoneUserStory?.rootModuleAfterLaunch() else {
+            fatalError(ErrorMessage.dependency.localizedDescription)
+        }
         module.output = output
         transitionHandler?.setViewControllers([module.view], animated: true)
     }
     
     func openAuthorizationModule(output: AuthorizationModuleOutput, container: Container) {
-        let module = AuthorizationUserStory(container: container).rootModule()
+        let safeResolver = container.synchronize()
+        guard let module = safeResolver.resolve(UserStoryFacade.self)?.authorizationUserStory?.rootModule() else {
+            fatalError(ErrorMessage.dependency.localizedDescription)
+        }
         module.output = output
         transitionHandler?.setViewControllers([module.view], animated: false)
     }
     
     func openAccountCreationModule(output: AccountModuleOutput, container: Container) {
-        let module = AccountUserStory(container: container).createAccountModule()
+        let safeResolver = container.synchronize()
+        guard let module = safeResolver.resolve(UserStoryFacade.self)?.accountUserStory?.createAccountModule() else {
+            fatalError(ErrorMessage.dependency.localizedDescription)
+        }
         module.output = output
         transitionHandler?.pushViewController(module.view, animated: true)
     }
     
     func openAccountEditModule(output: AccountModuleOutput, container: Container) {
-        let module = AccountUserStory(container: container).editAccountModule()
+        let safeResolver = container.synchronize()
+        guard let module = safeResolver.resolve(UserStoryFacade.self)?.accountUserStory?.editAccountModule() else {
+            fatalError(ErrorMessage.dependency.localizedDescription)
+        }
         module.output = output
         transitionHandler?.pushViewController(module.view, animated: true)
     }
     
     func openProfileModule(profile: ProfileModelProtocol, container: Container, output: ProfileModuleOutput) {
-        let module = ProfileUserStory(container: container).friendAccountModule(profile: profile)
+        let safeResolver = container.synchronize()
+        guard let module = safeResolver.resolve(UserStoryFacade.self)?.profileUserStory?.friendAccountModule(profile: profile) else {
+            fatalError(ErrorMessage.dependency.localizedDescription)
+        }
         module.output = output
         transitionHandler?.pushViewController(module.view, animated: true)
     }

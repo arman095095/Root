@@ -10,10 +10,7 @@ import Foundation
 import Module
 import Swinject
 import Managers
-
-public protocol LaunchRouteMap: AnyObject {
-    func rootModule() -> RootNavigationModule
-}
+import RootRouteMap
 
 public final class LaunchUserStory {
     private let container: Container

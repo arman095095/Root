@@ -11,7 +11,8 @@ private let remoteDependencies: [Package.Dependency] = [
     .package(url: "https://github.com/arman095095/Settings.git", branch: "develop"),
     .package(url: "https://github.com/arman095095/Profile.git", branch: "develop"),
     .package(url: "https://github.com/arman095095/Authorization.git", branch: "develop"),
-    .package(url: "https://github.com/arman095095/AuthorizedZone.git", branch: "develop")
+    .package(url: "https://github.com/arman095095/AuthorizedZone.git", branch: "develop"),
+    .package(url: "https://github.com/arman095095/RootRouteMap.git", branch: "develop")
 ]
 
 private let localDependencies: [Package.Dependency] = [
@@ -22,7 +23,8 @@ private let localDependencies: [Package.Dependency] = [
     .package(path: "/Users/armancarhcan/Desktop/Workdir/Settings"),
     .package(path: "/Users/armancarhcan/Desktop/Workdir/Profile"),
     .package(path: "/Users/armancarhcan/Desktop/Workdir/Authorization"),
-    .package(path: "/Users/armancarhcan/Desktop/Workdir/AuthorizedZone")
+    .package(path: "/Users/armancarhcan/Desktop/Workdir/AuthorizedZone"),
+    .package(path: "/Users/armancarhcan/Desktop/Workdir/RootRouteMap")
 ]
 
 let isDev = true
@@ -50,7 +52,8 @@ let package = Package(
                            .product(name: "Settings", package: "Settings"),
                            .product(name: "Profile", package: "Profile"),
                            .product(name: "Authorization", package: "Authorization"),
-                           .product(name: "AuthorizedZone", package: "AuthorizedZone")]),
+                           .product(name: "AuthorizedZone", package: "AuthorizedZone"),
+                           .product(name: "RootRouteMap", package: "RootRouteMap")]),
     ]
 )
 

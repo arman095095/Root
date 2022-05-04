@@ -8,20 +8,14 @@
 
 import UIKit
 import Managers
+import ModelInterfaces
 import Swinject
-import Authorization
-import Settings
-import Account
-import AuthorizedZone
-import Profile
-
-public protocol RootNavigationModuleOutput: AnyObject {
-    
-}
-
-public protocol RootNavigationModuleInput: AnyObject {
-    
-}
+import SettingsRouteMap
+import AccountRouteMap
+import AuthorizedZoneRouteMap
+import ProfileRouteMap
+import RootRouteMap
+import AuthorizationRouteMap
 
 protocol RootNavigationViewOutput: AnyObject {
     func viewDidLoad()
@@ -60,9 +54,7 @@ private extension RootNavigationPresenter {
             router.openAuthorizationModule(output: self, container: container)
             return
         }
-        router.openAuthorizedZone(context: .afterLaunch,
-                                  output: self,
-                                  container: container)
+        router.openAuthorizedZoneAfterLaunch(output: self, container: container)
     }
 }
 
@@ -76,7 +68,7 @@ extension RootNavigationPresenter: RootNavigationModuleInput {
 
 extension RootNavigationPresenter: AuthorizationModuleOutput {
     func userAuthorized(account: AccountModelProtocol) {
-        router.openAuthorizedZone(context: .afterAuthorization(account: account), output: self, container: container)
+        router.openAuthorizedZoneAfterAuthorization(account: account, output: self, container: container)
     }
 }
 
