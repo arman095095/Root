@@ -3,9 +3,8 @@
 
 import PackageDescription
 
-private var dependencies: [Package.Dependency] = [.package(url: "https://github.com/Swinject/Swinject.git", from: "2.8.0")]
-
-private let remoteDependencies: [Package.Dependency] = [
+private let dependencies: [Package.Dependency] = [
+    .package(url: "https://github.com/Swinject/Swinject.git", from: "2.8.0"),
     .package(url: "https://github.com/arman095095/Managers.git", branch: "develop"),
     .package(url: "https://github.com/arman095095/Module.git", branch: "develop"),
     .package(url: "https://github.com/arman095095/DesignSystem.git", branch: "develop"),
@@ -15,20 +14,6 @@ private let remoteDependencies: [Package.Dependency] = [
     .package(url: "https://github.com/arman095095/AuthorizedZone.git", branch: "develop"),
     .package(url: "https://github.com/arman095095/RootRouteMap.git", branch: "develop")
 ]
-
-private let localDependencies: [Package.Dependency] = [
-    .package(path: "../Managers"),
-    .package(path: "../Module"),
-    .package(path: "../DesignSystem"),
-    .package(path: "../Settings"),
-    .package(path: "../Profile"),
-    .package(path: "../Authorization"),
-    .package(path: "../AuthorizedZone"),
-    .package(path: "../RootRouteMap")
-]
-
-private let isDev = true
-isDev ? dependencies.append(contentsOf: localDependencies) : dependencies.append(contentsOf: remoteDependencies)
 
 let package = Package(
     name: "Root",
