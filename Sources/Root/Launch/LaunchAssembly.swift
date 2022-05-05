@@ -6,12 +6,10 @@
 //  Copyright © 2022 Arman Davidoff. All rights reserved.
 //
 
-import Foundation
 import Swinject
 import Managers
 import AlertManager
 import Utils
-import UIKit
 import NetworkServices
 
 public final class ApplicationAssembly: Assembly {

@@ -6,16 +6,12 @@
 //  Copyright (c) 2022 Arman Davidoff. All rights reserved.
 //
 
-import UIKit
 import Managers
 import ModelInterfaces
 import Swinject
-import SettingsRouteMap
-import AccountRouteMap
-import AuthorizedZoneRouteMap
-import ProfileRouteMap
 import RootRouteMap
 import AuthorizationRouteMap
+import AuthorizedZoneRouteMap
 
 protocol RootNavigationViewOutput: AnyObject {
     func viewDidLoad()

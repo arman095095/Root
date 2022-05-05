@@ -6,7 +6,7 @@
 //  Copyright (c) 2022 Arman Davidoff. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 protocol RootNavigationInteractorInput: AnyObject {
     

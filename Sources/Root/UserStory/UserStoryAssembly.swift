@@ -5,7 +5,7 @@
 //  Created by Арман Чархчян on 05.05.2022.
 //
 
-import Foundation
+import UserStoryFacade
 import Swinject
 import Account
 import AccountRouteMap
@@ -17,7 +17,6 @@ import Profile
 import ProfileRouteMap
 import Posts
 import PostsRouteMap
-import UserStoryFacade
 import Selection
 import SelectionRouteMap
 import Authorization

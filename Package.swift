@@ -3,8 +3,9 @@
 
 import PackageDescription
 
+private var dependencies: [Package.Dependency] = [.package(url: "https://github.com/Swinject/Swinject.git", from: "2.8.0")]
+
 private let remoteDependencies: [Package.Dependency] = [
-    .package(url: "https://github.com/Swinject/Swinject.git", from: "2.8.0"),
     .package(url: "https://github.com/arman095095/Managers.git", branch: "develop"),
     .package(url: "https://github.com/arman095095/Module.git", branch: "develop"),
     .package(url: "https://github.com/arman095095/DesignSystem.git", branch: "develop"),
@@ -16,19 +17,18 @@ private let remoteDependencies: [Package.Dependency] = [
 ]
 
 private let localDependencies: [Package.Dependency] = [
-    .package(url: "https://github.com/Swinject/Swinject.git", from: "2.8.0"),
-    .package(path: "/Users/armancarhcan/Desktop/Workdir/Managers"),
-    .package(path: "/Users/armancarhcan/Desktop/Workdir/Module"),
-    .package(path: "/Users/armancarhcan/Desktop/Workdir/DesignSystem"),
-    .package(path: "/Users/armancarhcan/Desktop/Workdir/Settings"),
-    .package(path: "/Users/armancarhcan/Desktop/Workdir/Profile"),
-    .package(path: "/Users/armancarhcan/Desktop/Workdir/Authorization"),
-    .package(path: "/Users/armancarhcan/Desktop/Workdir/AuthorizedZone"),
-    .package(path: "/Users/armancarhcan/Desktop/Workdir/RootRouteMap")
+    .package(path: "../Managers"),
+    .package(path: "../Module"),
+    .package(path: "../DesignSystem"),
+    .package(path: "../Settings"),
+    .package(path: "../Profile"),
+    .package(path: "../Authorization"),
+    .package(path: "../AuthorizedZone"),
+    .package(path: "../RootRouteMap")
 ]
 
-let isDev = true
-private let dependencies = isDev ? localDependencies : remoteDependencies
+private let isDev = true
+isDev ? dependencies.append(contentsOf: localDependencies) : dependencies.append(contentsOf: remoteDependencies)
 
 let package = Package(
     name: "Root",

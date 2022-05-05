@@ -6,8 +6,6 @@
 //  Copyright (c) 2022 Arman Davidoff. All rights reserved.
 //
 
-import UIKit
-import Module
 import Managers
 import Swinject
 import RootRouteMap
