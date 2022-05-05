@@ -9,7 +9,9 @@ private let dependencies: [Package.Dependency] = [
     .package(url: "https://github.com/arman095095/Module.git", branch: "develop"),
     .package(url: "https://github.com/arman095095/DesignSystem.git", branch: "develop"),
     .package(url: "https://github.com/arman095095/Settings.git", branch: "develop"),
+    .package(url: "https://github.com/arman095095/Account.git", branch: "develop"),
     .package(url: "https://github.com/arman095095/Profile.git", branch: "develop"),
+    .package(url: "https://github.com/arman095095/Posts.git", branch: "develop"),
     .package(url: "https://github.com/arman095095/Authorization.git", branch: "develop"),
     .package(url: "https://github.com/arman095095/AuthorizedZone.git", branch: "develop"),
     .package(url: "https://github.com/arman095095/RootRouteMap.git", branch: "develop")
@@ -36,7 +38,9 @@ let package = Package(
                            .product(name: "Swinject", package: "Swinject"),
                            .product(name: "Settings", package: "Settings"),
                            .product(name: "Profile", package: "Profile"),
+                           .product(name: "Account", package: "Account"),
                            .product(name: "Authorization", package: "Authorization"),
+                           .product(name: "Posts", package: "Posts"),
                            .product(name: "AuthorizedZone", package: "AuthorizedZone"),
                            .product(name: "RootRouteMap", package: "RootRouteMap")]),
     ]

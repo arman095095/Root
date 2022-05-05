@@ -9,7 +9,6 @@
 import UIKit
 import AuthorizedZoneRouteMap
 import Swinject
-import SettingsRouteMap
 import AccountRouteMap
 import ModelInterfaces
 import ProfileRouteMap
