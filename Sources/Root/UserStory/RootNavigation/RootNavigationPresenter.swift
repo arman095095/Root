@@ -8,20 +8,14 @@
 
 import UIKit
 import Managers
+import ModelInterfaces
 import Swinject
-import Authorization
-import Settings
-import Account
-import AuthorizedZone
-import Profile
-
-public protocol RootNavigationModuleOutput: AnyObject {
-    
-}
-
-public protocol RootNavigationModuleInput: AnyObject {
-    
-}
+import SettingsRouteMap
+import AccountRouteMap
+import AuthorizedZoneRouteMap
+import ProfileRouteMap
+import RootRouteMap
+import AuthorizationRouteMap
 
 protocol RootNavigationViewOutput: AnyObject {
     func viewDidLoad()
@@ -49,6 +43,7 @@ final class RootNavigationPresenter {
 
 extension RootNavigationPresenter: RootNavigationViewOutput {
     func viewDidLoad() {
+        view?.setupInititalState()
         configure()
     }
 }
@@ -56,14 +51,10 @@ extension RootNavigationPresenter: RootNavigationViewOutput {
 private extension RootNavigationPresenter {
     func configure() {
         guard let _ = quickAccessManager.userID else {
-            AuthorizationUserStoryAssembly.assemble(container: container)
             router.openAuthorizationModule(output: self, container: container)
             return
         }
-        AuthorizedZoneUserStoryAssembly.assemble(container: container)
-        router.openAuthorizedZone(context: .afterLaunch,
-                                  output: self,
-                                  container: container)
+        router.openAuthorizedZoneAfterLaunch(output: self, container: container)
     }
 }
 
@@ -77,15 +68,13 @@ extension RootNavigationPresenter: RootNavigationModuleInput {
 
 extension RootNavigationPresenter: AuthorizationModuleOutput {
     func userAuthorized(account: AccountModelProtocol) {
-        AuthorizedZoneUserStoryAssembly.assemble(container: container)
-        router.openAuthorizedZone(context: .afterAuthorization(account: account), output: self, container: container)
+        router.openAuthorizedZoneAfterAuthorization(account: account, output: self, container: container)
     }
 }
 
 
 extension RootNavigationPresenter: AuthorizedZoneModuleOutput {
     func openAuthorization() {
-        AuthorizationUserStoryAssembly.assemble(container: container)
         router.openAuthorizationModule(output: self, container: container)
     }
 }

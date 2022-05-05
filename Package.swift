@@ -3,6 +3,33 @@
 
 import PackageDescription
 
+private let remoteDependencies: [Package.Dependency] = [
+    .package(url: "https://github.com/Swinject/Swinject.git", from: "2.8.0"),
+    .package(url: "https://github.com/arman095095/Managers.git", branch: "develop"),
+    .package(url: "https://github.com/arman095095/Module.git", branch: "develop"),
+    .package(url: "https://github.com/arman095095/DesignSystem.git", branch: "develop"),
+    .package(url: "https://github.com/arman095095/Settings.git", branch: "develop"),
+    .package(url: "https://github.com/arman095095/Profile.git", branch: "develop"),
+    .package(url: "https://github.com/arman095095/Authorization.git", branch: "develop"),
+    .package(url: "https://github.com/arman095095/AuthorizedZone.git", branch: "develop"),
+    .package(url: "https://github.com/arman095095/RootRouteMap.git", branch: "develop")
+]
+
+private let localDependencies: [Package.Dependency] = [
+    .package(url: "https://github.com/Swinject/Swinject.git", from: "2.8.0"),
+    .package(path: "/Users/armancarhcan/Desktop/Workdir/Managers"),
+    .package(path: "/Users/armancarhcan/Desktop/Workdir/Module"),
+    .package(path: "/Users/armancarhcan/Desktop/Workdir/DesignSystem"),
+    .package(path: "/Users/armancarhcan/Desktop/Workdir/Settings"),
+    .package(path: "/Users/armancarhcan/Desktop/Workdir/Profile"),
+    .package(path: "/Users/armancarhcan/Desktop/Workdir/Authorization"),
+    .package(path: "/Users/armancarhcan/Desktop/Workdir/AuthorizedZone"),
+    .package(path: "/Users/armancarhcan/Desktop/Workdir/RootRouteMap")
+]
+
+let isDev = true
+private let dependencies = isDev ? localDependencies : remoteDependencies
+
 let package = Package(
     name: "Root",
     platforms: [.iOS(.v13)],
@@ -12,16 +39,7 @@ let package = Package(
             name: "Root",
             targets: ["Root"]),
     ],
-    dependencies: [
-        .package(url: "https://github.com/Swinject/Swinject.git", from: "2.8.0"),
-        .package(url: "https://github.com/arman095095/Managers.git", branch: "develop"),
-        .package(url: "https://github.com/arman095095/Module.git", branch: "develop"),
-        .package(url: "https://github.com/arman095095/DesignSystem.git", branch: "develop"),
-        .package(url: "https://github.com/arman095095/Settings.git", branch: "develop"),
-        .package(url: "https://github.com/arman095095/Profile.git", branch: "develop"),
-        .package(url: "https://github.com/arman095095/Authorization.git", branch: "develop"),
-        .package(url: "https://github.com/arman095095/AuthorizedZone.git", branch: "develop")
-    ],
+    dependencies: dependencies,
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
@@ -34,7 +52,8 @@ let package = Package(
                            .product(name: "Settings", package: "Settings"),
                            .product(name: "Profile", package: "Profile"),
                            .product(name: "Authorization", package: "Authorization"),
-                           .product(name: "AuthorizedZone", package: "AuthorizedZone")]),
+                           .product(name: "AuthorizedZone", package: "AuthorizedZone"),
+                           .product(name: "RootRouteMap", package: "RootRouteMap")]),
     ]
 )
 
