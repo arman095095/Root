@@ -88,7 +88,7 @@ extension RootNavigationRouter: RootNavigationRouterInput {
     
     func openProfileModule(profile: ProfileModelProtocol, container: Container, output: ProfileModuleOutput) {
         let safeResolver = container.synchronize()
-        guard let module = safeResolver.resolve(UserStoryFacadeProtocol.self)?.profileUserStory?.friendAccountModule(profile: profile) else {
+        guard let module = safeResolver.resolve(UserStoryFacadeProtocol.self)?.profileUserStory?.someAccountModule(profile: profile) else {
             fatalError(ErrorMessage.dependency.localizedDescription)
         }
         module.output = output
