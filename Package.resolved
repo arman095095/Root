@@ -82,6 +82,24 @@
       }
     },
     {
+      "identity" : "chats",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/arman095095/Chats.git",
+      "state" : {
+        "branch" : "develop",
+        "revision" : "ebf043902fc868f4bc01824f7137ff3b2b02b881"
+      }
+    },
+    {
+      "identity" : "chatsroutemap",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/arman095095/ChatsRouteMap.git",
+      "state" : {
+        "branch" : "develop",
+        "revision" : "77b218cef7e9eab46dfd5ab3f285eeec76fa4899"
+      }
+    },
+    {
       "identity" : "designsystem",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/arman095095/DesignSystem.git",
