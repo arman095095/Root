@@ -35,11 +35,11 @@ final class UserStoryAssembly: Assembly {
             facade.settingsUserStory = r.resolve(SettingsRouteMap.self)
             facade.accountUserStory = r.resolve(AccountRouteMap.self)
             facade.authorizationUserStory = r.resolve(AuthorizationRouteMap.self)
+            facade.chatsUserStory = r.resolve(ChatsRouteMap.self)
             facade.authorizedZoneUserStory = r.resolve(AuthorizedZoneRouteMap.self)
             facade.profileUserStory = r.resolve(ProfileRouteMap.self)
             facade.postsUserStory = r.resolve(PostsRouteMap.self)
             facade.regionUserStory = r.resolve(RegionSelectionRouteMap.self)
-            facade.chatsUserStory = r.resolve(ChatsRouteMap.self)
         }
         AuthorizationUserStoryAssembly().assemble(container: container)
         AccountUserStoryAssembly().assemble(container: container)
