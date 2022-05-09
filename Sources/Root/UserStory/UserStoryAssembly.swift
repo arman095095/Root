@@ -21,6 +21,8 @@ import Selection
 import SelectionRouteMap
 import Authorization
 import AuthorizationRouteMap
+import Chats
+import ChatsRouteMap
 
 final class UserStoryAssembly: Assembly {
 
@@ -37,6 +39,7 @@ final class UserStoryAssembly: Assembly {
             facade.profileUserStory = r.resolve(ProfileRouteMap.self)
             facade.postsUserStory = r.resolve(PostsRouteMap.self)
             facade.regionUserStory = r.resolve(RegionSelectionRouteMap.self)
+            facade.chatsUserStory = r.resolve(ChatsRouteMap.self)
         }
         AuthorizationUserStoryAssembly().assemble(container: container)
         AccountUserStoryAssembly().assemble(container: container)
@@ -45,5 +48,6 @@ final class UserStoryAssembly: Assembly {
         ProfileUserStoryAssembly().assemble(container: container)
         SettingsUserStoryAssembly().assemble(container: container)
         AuthorizedZoneUserStoryAssembly().assemble(container: container)
+        ChatsUserStoryAssembly().assemble(container: container)
     }
 }
