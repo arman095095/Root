@@ -47,7 +47,7 @@ final class UserStoryAssembly: Assembly {
         PostsUserStoryAssembly().assemble(container: container)
         ProfileUserStoryAssembly().assemble(container: container)
         SettingsUserStoryAssembly().assemble(container: container)
-        AuthorizedZoneUserStoryAssembly().assemble(container: container)
         ChatsUserStoryAssembly().assemble(container: container)
+        AuthorizedZoneUserStoryAssembly().assemble(container: container)
     }
 }
