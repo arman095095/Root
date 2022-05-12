@@ -190,6 +190,24 @@
       }
     },
     {
+      "identity" : "messanger",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/arman095095/Messanger.git",
+      "state" : {
+        "branch" : "develop",
+        "revision" : "8c05914ea22fa5d8f1449123a2b9a49a154fae19"
+      }
+    },
+    {
+      "identity" : "messangerroutemap",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/arman095095/MessangerRouteMap.git",
+      "state" : {
+        "branch" : "develop",
+        "revision" : "45122aeb1b4de6245a0e68509c8ca9bce9cbfaa1"
+      }
+    },
+    {
       "identity" : "modelinterfaces",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/arman095095/ModelInterfaces.git",
@@ -366,7 +384,7 @@
       "location" : "https://github.com/arman095095/UserStoryFacade.git",
       "state" : {
         "branch" : "develop",
-        "revision" : "3aabd4a895343aca9061862e37c738ccf3acf114"
+        "revision" : "a4ad8b8eb51244d0bcab58e456dcefeff2329a0d"
       }
     },
     {
