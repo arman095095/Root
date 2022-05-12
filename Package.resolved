@@ -15,7 +15,7 @@
       "location" : "https://github.com/arman095095/Account.git",
       "state" : {
         "branch" : "develop",
-        "revision" : "a4d1814caf9cfbd06b9d05829ae868b2b2913b14"
+        "revision" : "35a08626d0185f313070f4d2b5ad7c5f327a7f88"
       }
     },
     {
@@ -24,7 +24,7 @@
       "location" : "https://github.com/arman095095/AccountRouteMap.git",
       "state" : {
         "branch" : "develop",
-        "revision" : "6bf15f70d1ee79166322d551bb66f9f7543b5378"
+        "revision" : "353d7347778a07c9f706f2abd6f1e686c26cb489"
       }
     },
     {
@@ -42,7 +42,7 @@
       "location" : "https://github.com/arman095095/Authorization.git",
       "state" : {
         "branch" : "develop",
-        "revision" : "ecd167769438d3d83d54c34b8e7baa8c97dfb780"
+        "revision" : "80b6662b306c37bb5f4202d4029a402d1aa25019"
       }
     },
     {
@@ -60,7 +60,7 @@
       "location" : "https://github.com/arman095095/AuthorizedZone.git",
       "state" : {
         "branch" : "develop",
-        "revision" : "19baed756ac1503ef90244e7bd2eea443fbc86c0"
+        "revision" : "e4b415695acb04b33f5865233261eb7c2d3a2639"
       }
     },
     {
@@ -69,7 +69,7 @@
       "location" : "https://github.com/arman095095/AuthorizedZoneRouteMap.git",
       "state" : {
         "branch" : "develop",
-        "revision" : "84473ab8f4f0593595d02bf6dad6b12b0dc75bba"
+        "revision" : "1a36da3982b9d149ba4bca9607ea3fae209d1946"
       }
     },
     {
@@ -87,7 +87,7 @@
       "location" : "https://github.com/arman095095/Chats.git",
       "state" : {
         "branch" : "develop",
-        "revision" : "ebf043902fc868f4bc01824f7137ff3b2b02b881"
+        "revision" : "a782d23d2d86a5fdff37b7cb96460fa314c6242e"
       }
     },
     {
@@ -105,7 +105,7 @@
       "location" : "https://github.com/arman095095/DesignSystem.git",
       "state" : {
         "branch" : "develop",
-        "revision" : "3a9693371be522dfe41850ec6088fdf604a93192"
+        "revision" : "735834117cce873cd8a36587a318a7b34136d449"
       }
     },
     {
@@ -131,8 +131,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/google/GoogleDataTransport.git",
       "state" : {
-        "revision" : "4073d04bf28943353b706f461d4ca2a89abb69c1",
-        "version" : "9.1.3"
+        "revision" : "b905c49326b72211531ed9d7baa02d724828a8dc",
+        "version" : "9.1.4"
       }
     },
     {
@@ -186,7 +186,7 @@
       "location" : "https://github.com/arman095095/Managers.git",
       "state" : {
         "branch" : "develop",
-        "revision" : "4b3262dff7be92f33ff4a5c531c997d6c3533de8"
+        "revision" : "229f61fec3e49cc2405427725f616d01fff2e9ee"
       }
     },
     {
@@ -195,7 +195,7 @@
       "location" : "https://github.com/arman095095/ModelInterfaces.git",
       "state" : {
         "branch" : "develop",
-        "revision" : "2812afc016a1afa7ec46356b5bf9b7e22dbb5f30"
+        "revision" : "26ce028611a426872822e144f362cc25cafc6c67"
       }
     },
     {
@@ -222,7 +222,7 @@
       "location" : "https://github.com/arman095095/NetworkServices.git",
       "state" : {
         "branch" : "develop",
-        "revision" : "f8ab65fd6c494ee4035ae0c4add0db54ab53487a"
+        "revision" : "e9854c9dce313618c2745a57fbbe5296fdaa1c0f"
       }
     },
     {
@@ -231,7 +231,7 @@
       "location" : "https://github.com/arman095095/Posts.git",
       "state" : {
         "branch" : "develop",
-        "revision" : "bc0a7ccaf9e28036cef6e7aa3bbcff99e08e0fdf"
+        "revision" : "a662b862ba96ad23aabc4ae371203b24bdd465bd"
       }
     },
     {
@@ -240,7 +240,7 @@
       "location" : "https://github.com/arman095095/PostsRouteMap.git",
       "state" : {
         "branch" : "develop",
-        "revision" : "726fe75504995a1f06f2ad2d2e824792044aacf8"
+        "revision" : "d5aa4d1dde6968b4d0773228e14e08bdbb3df5b7"
       }
     },
     {
@@ -249,7 +249,7 @@
       "location" : "https://github.com/arman095095/Profile.git",
       "state" : {
         "branch" : "develop",
-        "revision" : "98fe0c7500d6115d13240ba3839fe0dc50a5bcc0"
+        "revision" : "c14f062529f10316bc10377c3e6582ff4205eb64"
       }
     },
     {
@@ -258,7 +258,7 @@
       "location" : "https://github.com/arman095095/ProfileRouteMap.git",
       "state" : {
         "branch" : "develop",
-        "revision" : "854a3ae134ecad3bfb7279cafff4e07030f321d6"
+        "revision" : "47ce5642cbf2f4fd30af33e7a26a2064799d29cb"
       }
     },
     {
@@ -312,7 +312,7 @@
       "location" : "https://github.com/arman095095/Settings.git",
       "state" : {
         "branch" : "develop",
-        "revision" : "05b0525a27a287acc46df39e3088c4c005b0492f"
+        "revision" : "c547568b54a4ac849c5881a93b70dd64516523d3"
       }
     },
     {
@@ -321,7 +321,7 @@
       "location" : "https://github.com/arman095095/SettingsRouteMap.git",
       "state" : {
         "branch" : "develop",
-        "revision" : "360a66995b5c9219e352ce8248d61ce33a2b15a9"
+        "revision" : "b77d3abd2ea9d7f1fdcce57ef36c1254bdfa1bcb"
       }
     },
     {
@@ -366,7 +366,7 @@
       "location" : "https://github.com/arman095095/UserStoryFacade.git",
       "state" : {
         "branch" : "develop",
-        "revision" : "f88d248f59b5e753a57fe1e4529f1de4f3c48c6c"
+        "revision" : "3aabd4a895343aca9061862e37c738ccf3acf114"
       }
     },
     {
