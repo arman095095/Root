@@ -11,6 +11,7 @@ import Managers
 import AlertManager
 import Utils
 import NetworkServices
+import Services
 
 public final class ApplicationAssembly: Assembly {
     public init() { }
@@ -18,6 +19,7 @@ public final class ApplicationAssembly: Assembly {
         UtilsAssembly().assemble(container: container)
         NetworkServicesAssembly().assemble(container: container)
         AlertManagerAssembly().assemble(container: container)
+        ServicesAssembly().assemble(container: container)
         ManagersAssembly().assemble(container: container)
         UserStoryAssembly().assemble(container: container)
     }

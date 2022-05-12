@@ -298,6 +298,15 @@
       }
     },
     {
+      "identity" : "services",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/arman095095/Services.git",
+      "state" : {
+        "branch" : "develop",
+        "revision" : "f58f04528b04afb3d29e990916c6744ffadf2afd"
+      }
+    },
+    {
       "identity" : "settings",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/arman095095/Settings.git",
