@@ -190,15 +190,6 @@
       }
     },
     {
-      "identity" : "messanger",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/arman095095/Messanger.git",
-      "state" : {
-        "branch" : "develop",
-        "revision" : "8c05914ea22fa5d8f1449123a2b9a49a154fae19"
-      }
-    },
-    {
       "identity" : "messangerroutemap",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/arman095095/MessangerRouteMap.git",
