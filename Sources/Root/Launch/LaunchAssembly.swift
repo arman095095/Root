@@ -16,7 +16,6 @@ import Services
 public final class ApplicationAssembly: Assembly {
     public init() { }
     public func assemble(container: Container) {
-        NetworkServicesAssembly().assemble(container: container)
         AlertManagerAssembly().assemble(container: container)
         ServicesAssembly().assemble(container: container)
         ManagersAssembly().assemble(container: container)
