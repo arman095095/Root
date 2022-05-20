@@ -32,14 +32,14 @@ final class UserStoryAssembly: Assembly {
         container.register(UserStoryFacadeProtocol.self) { r in
             UserStoryFacade()
         }.initCompleted { r, facade in
-            facade.settingsUserStory = r.resolve(SettingsRouteMap.self)
-            facade.accountUserStory = r.resolve(AccountRouteMap.self)
-            facade.authorizationUserStory = r.resolve(AuthorizationRouteMap.self)
-            facade.chatsUserStory = r.resolve(ChatsRouteMap.self)
-            facade.authorizedZoneUserStory = r.resolve(AuthorizedZoneRouteMap.self)
-            facade.profileUserStory = r.resolve(ProfileRouteMap.self)
-            facade.postsUserStory = r.resolve(PostsRouteMap.self)
-            facade.regionUserStory = r.resolve(RegionSelectionRouteMap.self)
+            facade.settings = r.resolve(SettingsRouteMap.self)
+            facade.account = r.resolve(AccountRouteMap.self)
+            facade.authorization = r.resolve(AuthorizationRouteMap.self)
+            facade.chats = r.resolve(ChatsRouteMap.self)
+            facade.authorizedZone = r.resolve(AuthorizedZoneRouteMap.self)
+            facade.profile = r.resolve(ProfileRouteMap.self)
+            facade.posts = r.resolve(PostsRouteMap.self)
+            facade.regionSelection = r.resolve(RegionSelectionRouteMap.self)
         }
         AuthorizationUserStoryAssembly().assemble(container: container)
         AccountUserStoryAssembly().assemble(container: container)

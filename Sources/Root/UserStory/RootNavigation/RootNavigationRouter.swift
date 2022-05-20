@@ -42,7 +42,7 @@ extension RootNavigationRouter: RootNavigationRouterInput {
                                               output: AuthorizedZoneModuleOutput,
                                               container: Container) {
         let safeResolver = container.synchronize()
-        guard let module = safeResolver.resolve(UserStoryFacadeProtocol.self)?.authorizedZoneUserStory?.rootModuleAfterAuthorization(account: account) else {
+        guard let module = safeResolver.resolve(UserStoryFacadeProtocol.self)?.authorizedZone?.rootModuleAfterAuthorization(account: account) else {
             fatalError(ErrorMessage.dependency.localizedDescription)
         }
         module.output = output
@@ -52,7 +52,7 @@ extension RootNavigationRouter: RootNavigationRouterInput {
     func openAuthorizedZoneAfterLaunch(output: AuthorizedZoneModuleOutput,
                                        container: Container) {
         let safeResolver = container.synchronize()
-        guard let module = safeResolver.resolve(UserStoryFacadeProtocol.self)?.authorizedZoneUserStory?.rootModuleAfterLaunch() else {
+        guard let module = safeResolver.resolve(UserStoryFacadeProtocol.self)?.authorizedZone?.rootModuleAfterLaunch() else {
             fatalError(ErrorMessage.dependency.localizedDescription)
         }
         module.output = output
@@ -61,7 +61,7 @@ extension RootNavigationRouter: RootNavigationRouterInput {
     
     func openAuthorizationModule(output: AuthorizationModuleOutput, container: Container) {
         let safeResolver = container.synchronize()
-        guard let module = safeResolver.resolve(UserStoryFacadeProtocol.self)?.authorizationUserStory?.rootModule() else {
+        guard let module = safeResolver.resolve(UserStoryFacadeProtocol.self)?.authorization?.rootModule() else {
             fatalError(ErrorMessage.dependency.localizedDescription)
         }
         module.output = output
@@ -70,7 +70,7 @@ extension RootNavigationRouter: RootNavigationRouterInput {
     
     func openAccountCreationModule(output: AccountModuleOutput, container: Container) {
         let safeResolver = container.synchronize()
-        guard let module = safeResolver.resolve(UserStoryFacadeProtocol.self)?.accountUserStory?.createAccountModule() else {
+        guard let module = safeResolver.resolve(UserStoryFacadeProtocol.self)?.account?.createAccountModule() else {
             fatalError(ErrorMessage.dependency.localizedDescription)
         }
         module.output = output
@@ -79,7 +79,7 @@ extension RootNavigationRouter: RootNavigationRouterInput {
     
     func openAccountEditModule(output: AccountModuleOutput, container: Container) {
         let safeResolver = container.synchronize()
-        guard let module = safeResolver.resolve(UserStoryFacadeProtocol.self)?.accountUserStory?.editAccountModule() else {
+        guard let module = safeResolver.resolve(UserStoryFacadeProtocol.self)?.account?.editAccountModule() else {
             fatalError(ErrorMessage.dependency.localizedDescription)
         }
         module.output = output
@@ -88,7 +88,7 @@ extension RootNavigationRouter: RootNavigationRouterInput {
     
     func openProfileModule(profile: ProfileModelProtocol, container: Container, output: ProfileModuleOutput) {
         let safeResolver = container.synchronize()
-        guard let module = safeResolver.resolve(UserStoryFacadeProtocol.self)?.profileUserStory?.someAccountModule(profile: profile) else {
+        guard let module = safeResolver.resolve(UserStoryFacadeProtocol.self)?.profile?.someAccountModule(profile: profile) else {
             fatalError(ErrorMessage.dependency.localizedDescription)
         }
         module.output = output
