@@ -15,7 +15,7 @@
       "location" : "https://github.com/arman095095/Account.git",
       "state" : {
         "branch" : "develop",
-        "revision" : "2725ccc5b255a11ded0e273e3b8bcc3169dfe2da"
+        "revision" : "4cf92aa24858feaed19c35d522bd2ca132df19ba"
       }
     },
     {
@@ -42,7 +42,7 @@
       "location" : "https://github.com/arman095095/Authorization.git",
       "state" : {
         "branch" : "develop",
-        "revision" : "6192848ccdbf4d179eea8be103562f123c3ea4aa"
+        "revision" : "22a2d29923efe44491d36265231c1a89ae880629"
       }
     },
     {
@@ -60,7 +60,7 @@
       "location" : "https://github.com/arman095095/AuthorizedZone.git",
       "state" : {
         "branch" : "develop",
-        "revision" : "e44f8067df9f956a720ac5a061456fcc4ea5e3df"
+        "revision" : "7f9cf671229b5feb91ebeab828a98c1239312f72"
       }
     },
     {
@@ -87,7 +87,7 @@
       "location" : "https://github.com/arman095095/Chats.git",
       "state" : {
         "branch" : "develop",
-        "revision" : "f1e7ffa796aa9ffc23ca6d2327da541ff43995e5"
+        "revision" : "ad916936497eb91587ecb776aa22f76d9e9ee789"
       }
     },
     {
@@ -167,8 +167,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/nathantannar4/InputBarAccessoryView.git",
       "state" : {
-        "revision" : "2843b4454cfb6de5b4d1e5939fef2dd6257b69ee",
-        "version" : "5.5.0"
+        "revision" : "e5da8c5e3c6ff2740ec2b721dd71e2cf24053001",
+        "version" : "6.1.0"
       }
     },
     {
@@ -186,16 +186,16 @@
       "location" : "https://github.com/arman095095/Managers.git",
       "state" : {
         "branch" : "develop",
-        "revision" : "4389a54754e683114756f2b8ff3d44bc712a3995"
+        "revision" : "27b0a33d3f6ef48f6e5e6c4740c437401ab5e4f4"
       }
     },
     {
       "identity" : "messagekit",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/MessageKit/MessageKit",
+      "location" : "https://github.com/arman095095/MessageKit.git",
       "state" : {
-        "revision" : "84236d91ac5783e3ecbefc15b82d854476720115",
-        "version" : "3.8.0"
+        "branch" : "develop",
+        "revision" : "c1512561377d23931d6bedf5481304d18efdd6bc"
       }
     },
     {
@@ -204,7 +204,7 @@
       "location" : "https://github.com/arman095095/ModelInterfaces.git",
       "state" : {
         "branch" : "develop",
-        "revision" : "6d70c5ac74fb6d2c18fb8ec05050629d1c55efb6"
+        "revision" : "247339c5d3a279b434e39482b0d473dda404a184"
       }
     },
     {
@@ -231,7 +231,7 @@
       "location" : "https://github.com/arman095095/NetworkServices.git",
       "state" : {
         "branch" : "develop",
-        "revision" : "d160339a1a1e38895f2daff8a35b1f17004d52d2"
+        "revision" : "efa31a8e42ddc4e5ed53d840f531f0761e60540f"
       }
     },
     {
@@ -240,7 +240,7 @@
       "location" : "https://github.com/arman095095/Posts.git",
       "state" : {
         "branch" : "develop",
-        "revision" : "72e572069133808ceacddb04535fa076a25e5e46"
+        "revision" : "19d575132981e892e99ba57f6b36e22bbcac33cd"
       }
     },
     {
@@ -258,7 +258,7 @@
       "location" : "https://github.com/arman095095/Profile.git",
       "state" : {
         "branch" : "develop",
-        "revision" : "39a88e4e4d850b428a67cea1b34364a97342ec03"
+        "revision" : "e5d544aff98ce2ce66be93dc8fcbd6e6d96fac14"
       }
     },
     {
@@ -312,7 +312,7 @@
       "location" : "https://github.com/arman095095/Services.git",
       "state" : {
         "branch" : "develop",
-        "revision" : "08fc87e651379cf854062330eb46e5d80c6f0d1b"
+        "revision" : "26d2044c7f05a813ec0a4c08492280bc88231121"
       }
     },
     {
@@ -321,7 +321,7 @@
       "location" : "https://github.com/arman095095/Settings.git",
       "state" : {
         "branch" : "develop",
-        "revision" : "c20513f346583772b9363eba35e3c2ffdfb7d095"
+        "revision" : "390975bb4d0f8004c9916440a0289f6fa7faea7a"
       }
     },
     {
@@ -375,7 +375,7 @@
       "location" : "https://github.com/arman095095/UserStoryFacade.git",
       "state" : {
         "branch" : "develop",
-        "revision" : "98c24e7943f8567fb0711207efef4c6f9b111532"
+        "revision" : "83e43bdde407fb637d7ed592be9bcf045e9e0e9d"
       }
     },
     {

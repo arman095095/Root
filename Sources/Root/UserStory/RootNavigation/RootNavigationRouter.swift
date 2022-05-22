@@ -9,11 +9,9 @@
 import UIKit
 import AuthorizedZoneRouteMap
 import Swinject
-import AccountRouteMap
-import ModelInterfaces
-import ProfileRouteMap
 import AuthorizationRouteMap
 import UserStoryFacade
+import ModelInterfaces
 
 protocol RootNavigationRouterInput: AnyObject {
     func openAuthorizationModule(output: AuthorizationModuleOutput,
@@ -23,13 +21,6 @@ protocol RootNavigationRouterInput: AnyObject {
     func openAuthorizedZoneAfterAuthorization(account: AccountModelProtocol,
                                               output: AuthorizedZoneModuleOutput,
                                               container: Container)
-    func openAccountCreationModule(output: AccountModuleOutput,
-                                   container: Container)
-    func openAccountEditModule(output: AccountModuleOutput,
-                               container: Container)
-    func openProfileModule(profile: ProfileModelProtocol,
-                           container: Container,
-                           output: ProfileModuleOutput)
 }
 
 final class RootNavigationRouter {
@@ -66,32 +57,5 @@ extension RootNavigationRouter: RootNavigationRouterInput {
         }
         module.output = output
         transitionHandler?.setViewControllers([module.view], animated: false)
-    }
-    
-    func openAccountCreationModule(output: AccountModuleOutput, container: Container) {
-        let safeResolver = container.synchronize()
-        guard let module = safeResolver.resolve(UserStoryFacadeProtocol.self)?.account?.createAccountModule() else {
-            fatalError(ErrorMessage.dependency.localizedDescription)
-        }
-        module.output = output
-        transitionHandler?.pushViewController(module.view, animated: true)
-    }
-    
-    func openAccountEditModule(output: AccountModuleOutput, container: Container) {
-        let safeResolver = container.synchronize()
-        guard let module = safeResolver.resolve(UserStoryFacadeProtocol.self)?.account?.editAccountModule() else {
-            fatalError(ErrorMessage.dependency.localizedDescription)
-        }
-        module.output = output
-        transitionHandler?.pushViewController(module.view, animated: true)
-    }
-    
-    func openProfileModule(profile: ProfileModelProtocol, container: Container, output: ProfileModuleOutput) {
-        let safeResolver = container.synchronize()
-        guard let module = safeResolver.resolve(UserStoryFacadeProtocol.self)?.profile?.someAccountModule(profile: profile) else {
-            fatalError(ErrorMessage.dependency.localizedDescription)
-        }
-        module.output = output
-        transitionHandler?.pushViewController(module.view, animated: true)
     }
 }
